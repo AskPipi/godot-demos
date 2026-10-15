@@ -1,0 +1,42 @@
+# ============================================================
+# Godot 项目 .gitignore
+# 基于 GitHub 官方模板 github/gitignore → Godot.gitignore（2026-10-15 实时拉取）
+# 放置位置：项目根目录（与 project.godot 同级），文件名必须是 .gitignore
+# 作用：告诉 Git「这些文件不要纳入版本管理」
+# ============================================================
+
+# ---- Godot 4 编辑器缓存与导入产物（最重要，必须忽略） ----
+.godot/
+.import/            # Godot 3 遗留目录，若你只用 Godot 4 也无害
+.nomedia
+
+# ---- 导出/构建产物（体积大、可重新生成） ----
+export.cfg
+export_credentials.cfg
+*.tmp
+*.exe
+# 若你的项目不把 .pck 当作运行时依赖，可取消下一行注释
+# *.pck
+
+# ---- 自动生成的翻译文件（从 CSV 编译而来） ----
+*.translation
+
+# ---- C# / .NET（Godot .NET 版才会用到；用 GDScript 可忽略这些） ----
+~*.dll
+.mono/
+data_*/
+mono_crash.*.json
+
+# ---- 本项目自定义：常见个人习惯 ----
+# 导出产物目录（我们的约定：构建输出不进仓库）
+build/
+builds/
+export/
+# 编辑器/系统噪音
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*.log
+# 临时笔记与草稿不入库
+*.bak
+*~
